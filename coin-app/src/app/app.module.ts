@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CryptocurrenciesComponent } from './cryptocurrencies/cryptocurrencies.component';
 import { CurrenciesComponent } from './currencies/currencies.component';
+import { DisplayCurrencyComponent } from './display-currency/display-currency.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CryptocurrenciesComponent,
-    CurrenciesComponent
+    CurrenciesComponent,
+    DisplayCurrencyComponent
   ],
   imports: [
     BrowserModule,
