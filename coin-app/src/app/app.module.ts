@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CryptocurrenciesComponent } from './cryptocurrencies/cryptocurrencies.component';
+import { CurrenciesComponent } from './currencies/currencies.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CryptocurrenciesComponent,
+    CurrenciesComponent
   ],
   imports: [
     BrowserModule,
