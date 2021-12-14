@@ -12,17 +12,21 @@ export class CurrenciesComponent implements OnInit {
   // selectedOption: string;
   // printedOption: string;
 
-  currencies: Currencies[] = [];
+  currencies: Currencies[] = [
+    
+  ];
 
   cryptos = [ "BTC", "ETH", "DOGE", "LTC", "VET" ];
   
-  fiats = ["USD", "EUR"]
+  fiats = ["USD"]
+
+
   //dependency injection
   constructor(private currenciesService: CurrenciesService) { }
 
   ngOnInit(): void {
-    this.currenciesService.getCurrencies().subscribe(payload => {
-      this.currencies = payload;
+    this.currenciesService.getCurrencies().subscribe(res => {
+      this.currencies = res;
       console.log(this.currencies);
     });
     

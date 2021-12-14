@@ -3,6 +3,11 @@
     <h1>Coin Display</h1>
 
 
+
+
+    <div></div>
+
+
     <label for="cryptoSelect">Choose a cryptocurrency: </label>
     <select name="cryptoSelect" id="cryptoSelect"   >
       <option *ngFor="let crypto of cryptos" value={{crypto}}>{{crypto}} </option>
@@ -10,9 +15,13 @@
 
     <label for="currencySelect">Choose a currency: </label>
     <select name="fiatSelect" id="fiatSelect"   >
-        <option *ngFor="let fiat of fiats" value={{fiat}}>{{fiat}} </option>
+        <option *ngFor="let fiat of fiats" value={{fiat}}>{{fiat}}</option>
       </select>
-  
+
+      <div *ngFor="let currency of currencies">
+        {{currency}}
+        
+      </div>
 </div>
 
 <a routerLink="/display-currency">Go to displaycurrency</a>
