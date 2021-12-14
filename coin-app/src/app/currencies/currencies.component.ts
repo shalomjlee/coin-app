@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Currencies } from './currencies.model';
+import { CurrenciesService } from '../currencies.service'
 
 @Component({
   selector: 'app-currencies',
@@ -10,21 +12,20 @@ export class CurrenciesComponent implements OnInit {
   // selectedOption: string;
   // printedOption: string;
 
-  options = [
-    { name: "USD", value: 1},
-    { name: "EUR", value: 2},
-    { name: "GBP", value: 3},
-    { name: "RMB", value: 4},
-    { name: "KRW", value: 5}
-  ]
+  currencies: Currencies[] = [];
 
   // print() {
   //   this.printedOption = this.selectedOption;
   //   console.log("My input: ", this.selectedOption)
   // }
-  constructor() { }
+
+  //dependency injection
+  constructor(private currenciesService: CurrenciesService) { }
 
   ngOnInit(): void {
+    this.currenciesService.getCurrencies().subscribe(payload => {
+      this.currencies = payload;
+    });
   }
 
 }

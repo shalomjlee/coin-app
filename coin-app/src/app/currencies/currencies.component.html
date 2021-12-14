@@ -1,1 +1,24 @@
-<p>currencies works!</p>
+
+<div>
+    <h1>Coin Display</h1>
+
+    <label for="coinSelect">Choose a cryptocurrency: </label>
+    <select name="cryptoSelect" id="cryptoSelect">
+      <option value="BTC">Bitcoin </option>
+      <option value="ETH">Ethereum </option>
+      <option value="LTC">Litecoin</option>
+      <option value="DOGE">Dogecoin</option>
+      <option value="VET">VeChain</option>
+    </select>
+
+    <label for="currencySelect">Choose a currency: </label>
+    <select name="currencySelect" id="currencySelect">
+      <option value="USD">US Dollar </option>
+      <option value="EUR">Euro </option>
+      <option value="GBP">Pounds</option>
+      <option value="RMB">Yuan</option>
+      <option value="KRW">Won</option>
+    </select>
+</div>
+
+<a routerLink="/display-currency">Go to displaycurrency</a>
