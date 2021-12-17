@@ -25,10 +25,12 @@ export class CurrenciesComponent implements OnInit {
   constructor(private currenciesService: CurrenciesService) { }
 
   ngOnInit(): void {
+    
     this.currenciesService.getCurrencies().subscribe(res => {
       this.currencies = res;
       console.log(this.currencies);
     });
+    
     
   }
 

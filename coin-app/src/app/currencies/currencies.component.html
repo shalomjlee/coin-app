@@ -2,12 +2,6 @@
 <div>
     <h1>Coin Display</h1>
 
-
-
-
-    <div></div>
-
-
     <label for="cryptoSelect">Choose a cryptocurrency: </label>
     <select name="cryptoSelect" id="cryptoSelect"   >
       <option *ngFor="let crypto of cryptos" value={{crypto}}>{{crypto}} </option>
@@ -19,8 +13,7 @@
       </select>
 
       <div *ngFor="let currency of currencies">
-        {{currency}}
-        
+        {{currencies}}
       </div>
 </div>
 

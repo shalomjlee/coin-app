@@ -8,8 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./display-currency.component.css']
 })
 export class DisplayCurrencyComponent implements OnInit {
-  // cryptoSelect: string[];
-  // currencySelect: string[];
+
   constructor() { }
 
   ngOnInit(): void {

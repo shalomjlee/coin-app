@@ -22,7 +22,7 @@ export class CurrenciesService {
     const api_key = "C9EA2FE5-0E84-44FE-9C7C-C04848EFA5E4" 
     // const data = this.http.get(`https://rest.coinapi.io/v1/exchangerate/${crypto}/USD?${api_key}`);
     const data = this.http.get(`https://rest.coinapi.io/v1/exchangerate/BTC/USD?apikey=${api_key}`);
-    
+    console.log(data);
     return data
   }
 }
